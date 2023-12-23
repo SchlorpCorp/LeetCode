@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+
+class Solution {
+    public boolean isPathCrossing(String path) {
+
+        boolean truth_value = false;
+        
+        int x = 0;
+        int y = 0;
+
+        ArrayList <Integer> x_list = new ArrayList <Integer>();
+        ArrayList <Integer> y_list = new ArrayList <Integer>(); 
+
+        x_list.add(x);
+        y_list.add(y);     
+
+        for (int i = 0; i < path.length(); i++) {
+
+            if (path.charAt(i) == 'N') {
+                x++;
+            }
+            else if (path.charAt(i) == 'S') {
+                x--;
+            }
+            else if (path.charAt(i) == 'E') {
+                y++;
+            }
+            else if (path.charAt(i) == 'W') {
+                y--;
+            }
+
+            x_list.add(x);
+            y_list.add(y);
+
+            for (int j = 0; j < x_list.size() - 1; j++) {
+                
+                if ((x_list.get(j) == x) && (y_list.get(j) == y)) {
+
+                    truth_value = true;
+
+                    break;
+
+                }
+
+            }
+
+        }
+
+        return truth_value;
+        
+    }
+}
