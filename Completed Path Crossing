@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Solution {
+class PathCrossing {
 
-    public boolean isPathCrossing(String path) {
+    public static boolean isPathCrossing(String path) {
 
         boolean truth_value = false;
         
