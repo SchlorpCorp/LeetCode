@@ -1,1 +1,59 @@
+import java.util.Scanner;
 
+class Solution {
+
+    public static int[] twoSum(int[] nums, int target) {
+
+        int [] new_array = new int[2];
+
+        for (int i = 0; i < nums.length - 1; i++) {
+
+            for (int j = i + 1; j < nums.length; j++) {
+
+                if (nums[i] + nums[j] == target) {
+
+                    new_array[0] = i;
+                    new_array[1] = j;
+
+                    break;
+                }
+            }
+        }
+
+        return new_array;
+        
+    }
+
+    public static void main (String [ ] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("What is the desired integer?");
+
+        int target = scan.nextInt();
+
+        System.out.print("How many integers will your array include?");
+
+        int array_size = scan.nextInt();
+
+        int [] input_array = new int[array_size];
+
+        for (int i = 0; i < array_size; i++) {
+
+            System.out.print("Please enter next number in array: ");
+
+            input_array[i] = scan.nextInt();
+
+        }
+
+        int[] final_array = twoSum (input_array, target);
+
+        for (int i = 0; i < 2; i++) {
+
+            System.out.println("The index of number " + (i + 1) + " is " final_array[i]);
+
+        }
+
+    }
+
+}
