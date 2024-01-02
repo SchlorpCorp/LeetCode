@@ -1,0 +1,76 @@
+class Solution {
+
+    public int lengthOfLongestSubstring(String s) {
+
+        boolean add_1 = false;
+
+        int next = 0;
+
+        int temp_size = 1;
+
+        int start_element = 0;
+
+        int [ ] temp_array = new int [s.length()];
+
+        if (s.length() != 0) {
+
+            temp_array[0] = 1;
+
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+
+            for (int j = start_element; j < i; j++) {
+
+                if (s.charAt(i) != s.charAt(j)) {
+
+                    add_1 = true;
+
+                }
+                else {
+
+                    temp_array[next] = temp_size;
+
+                    next ++;
+
+                    temp_size = 1;
+
+                    i = j;
+
+                    start_element = j + 1;
+
+                    add_1 = false;
+
+                    continue;
+
+                }
+
+            }
+
+            if (add_1) {
+
+                temp_size ++;
+
+            }
+
+            temp_array[next] = temp_size;
+
+        }
+
+        int max_size = 0;
+
+        for (int i = 0; i < temp_array.length; i++) {
+
+            if (temp_array[i] > max_size) {
+
+                max_size = temp_array[i];
+
+            }
+
+        }
+
+        return max_size;
+        
+    }
+
+}
