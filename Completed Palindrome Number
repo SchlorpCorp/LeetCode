@@ -30,7 +30,7 @@ class PalindromeNumber {
 
         int input = scan.nextInt();
 
-        if (isPalindrome(input) {
+        if (isPalindrome(input)) {
 
             System.out.println("Is a palindrome");
 
