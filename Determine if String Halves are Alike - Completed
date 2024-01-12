@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+class AlikeHalfStrings {
+
+    public static void halvesAreAlike(String s) {
+
+        String start = s.substring(0, s.length() / 2); 
+        String end = s.substring(s.length() / 2, s.length());  
+
+        int count_1 = 0;
+        int count_2 = 0;
+
+        char [] char_array = new char [] {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+
+        for (int i = 0; i < start.length(); i++) {
+
+            for (int j = 0; j < char_array.length; j++) {
+
+                if (start.charAt(i) == char_array[j]) {
+
+                    count_1 ++;
+
+                }
+
+            }
+
+        }
+
+        for (int i = 0; i < end.length(); i++) {
+
+            for (int j = 0; j < char_array.length; j++) {
+
+                if (end.charAt(i) == char_array[j]) {
+
+                    count_2 ++;
+
+                }
+
+            }
+
+        }
+
+        if (count_1 == count_2) {
+
+            System.out.println("Strings are alike.");
+
+        }
+        else {
+
+            System.out.println("Strings are not alike.");
+
+        }
+
+    }
+
+    public static void main (String []  args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        boolean valid_string = false;
+
+        String input = "";
+
+        while (!valid_string) {
+
+            System.out.print("Enter a string with an even number of characters: ");
+
+            input = scan.next();
+
+            if (input.length() % 2 != 0) {
+
+                System.out.println("Not a valid string, please try again.");
+
+            }
+            else {
+
+                valid_string = true;
+
+            }
+
+        }
+
+        halvesAreAlike(input);
+
+    }
+
+}
