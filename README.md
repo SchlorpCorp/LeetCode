@@ -1,5 +1,3 @@
-This repository contains completed problems from LeetCode.
+You are given a string s of even length. Split this string into two halves of equal lengths, and let a be the first half and b be the second half.
 
-Some branches will include the completed solution to the LeetCode problem as well as a file with the same name as the LeetCode problem but marked as "completed". Files marked as completed have been written so that they can be fully executed by the user. 
-
-Branch names will mention what coding language was used to complete the LeetCode problem.
+Two strings are alike if they have the same number of vowels ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'). Notice that s contains uppercase and lowercase letters.
