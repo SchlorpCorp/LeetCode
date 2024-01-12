@@ -1,0 +1,14 @@
+class Solution:
+
+    def halvesAreAlike(self, s: str) -> bool:
+
+        def valid(string):
+            valid_letters = list("aeiouAEIOU")
+            return sum(1 for char in string if char in valid_letters)
+
+        index = len(s) // 2
+
+        string_1 = s[:index]
+        string_2 = s[index:]
+
+        return valid(string_1) == valid(string_2) 
