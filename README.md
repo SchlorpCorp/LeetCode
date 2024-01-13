@@ -1,5 +1,5 @@
-This repository contains completed problems from LeetCode.
+You are given two strings of the same length s and t. In one step you can choose any character of t and replace it with another character.
 
-Some branches will include the completed solution to the LeetCode problem as well as a file with the same name as the LeetCode problem but marked as "completed". Files marked as completed have been written so that they can be fully executed by the user. 
+Return the minimum number of steps to make t an anagram of s.
 
-Branch names will mention what coding language was used to complete the LeetCode problem.
+An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
