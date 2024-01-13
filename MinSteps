@@ -1,0 +1,12 @@
+class Solution:
+    def minSteps(self, s: str, t: str) -> int:
+
+        match = 0
+        count = len(s)
+
+        for char in t:
+            if char in s:
+                match = match + 1
+                s = s.replace(char,"",1)
+
+        return count - match
