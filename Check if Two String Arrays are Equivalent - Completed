@@ -1,0 +1,130 @@
+import java.util.Scanner;
+
+class EquivalentStringArrays {
+
+    public static void arrayStringsAreEqual(String[] word1, String[] word2) {
+
+        String string_1 = "";
+        String string_2 = "";
+
+        for (int i = 0; i < word1.length; i++) {
+
+            string_1 = string_1 + word1[i];
+
+        }
+
+        for (int i = 0; i < word2.length; i++) {
+
+            string_2 = string_2 + word2[i];
+
+        }
+
+        if (string_1.equals(string_2)) {
+
+            System.out.println("String arrays are equivalent.");
+
+        }
+        else {
+
+            System.out.println("String arrays are not equivalent.");
+
+        }
+        
+    }
+
+    public static void main (String [] args) {
+
+        String string_to_add = "";
+
+        Scanner scan = new Scanner (System.in);
+
+        boolean move = true;
+
+        String [] array_1 = new String[100];
+        String [] array_2 = new String[100];
+
+        int count = 1;
+
+        while (move) {
+
+            if (count > 100) {
+
+                System.out.print("This array is already full");
+
+                break;
+
+            }
+
+            System.out.print("Enter element " + count + " of first array or enter -1 to stop: ");
+
+            string_to_add = scan.next();
+
+            if (string_to_add.equals("-1")) {
+
+                move = false;
+
+            }
+            else {
+
+                array_1[count - 1] = string_to_add;
+                
+            }
+
+            count ++;
+
+        }
+
+        String [] final_array_1 = new String [count - 1];
+
+        for (int i = 0; i < final_array_1.length; i++) {
+
+            final_array_1[i] = array_1[i];
+
+        }
+
+        count = 1;
+
+        move = true;
+
+        while (move) {
+
+            if (count > 100) {
+
+                System.out.print("This array is already full");
+
+                break;
+
+            }
+
+            System.out.print("Enter element " + count + " of second array or enter -1 to stop: ");
+
+            string_to_add = scan.next();
+
+            if (string_to_add.equals("-1")) {
+
+                move = false;
+
+            }
+            else {
+
+                array_2[count - 1] = string_to_add;
+                
+            }
+
+            count ++;
+
+        }
+
+        String [] final_array_2 = new String [count - 1];
+
+        for (int i = 0; i < final_array_2.length; i++) {
+
+            final_array_2[i] = array_2[i];
+
+        }
+
+        arrayStringsAreEqual(final_array_1, final_array_2);
+
+    }
+
+}
