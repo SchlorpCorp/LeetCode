@@ -49,7 +49,7 @@ class EquivalentStringArrays {
 
             if (count > 100) {
 
-                System.out.print("This array is already full");
+                System.out.println("This array is already full");
 
                 break;
 
@@ -90,7 +90,7 @@ class EquivalentStringArrays {
 
             if (count > 100) {
 
-                System.out.print("This array is already full");
+                System.out.println("This array is already full");
 
                 break;
 
