@@ -1,0 +1,17 @@
+class Solution:
+
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        nums.sort()
+        
+        i = 0
+
+        dupes = False
+        
+        while i < (len(nums) - 1):
+            if nums[i] == nums[i + 1]:
+                dupes = True
+                break
+            i = i + 1
+        
+        return dupes
