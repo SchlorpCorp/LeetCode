@@ -1,5 +1,3 @@
-This repository contains completed problems from LeetCode.
+Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
 
-Some branches will include the completed solution to the LeetCode problem as well as a file with the same name as the LeetCode problem but marked as "completed". Files marked as completed have been written so that they can be fully executed by the user. 
-
-Branch names will mention what coding language was used to complete the LeetCode problem.
+A string is represented by an array if the array elements concatenated in order forms the string.
