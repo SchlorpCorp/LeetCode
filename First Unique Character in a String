@@ -1,0 +1,35 @@
+class Solution {
+
+    public int firstUniqChar(String s) {
+
+        boolean double_found = true;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            for (int j = 0; j < s.length(); j++) {
+
+                if ((s.charAt(i) == s.charAt(j)) && (j != i)) {
+
+                    double_found = false;
+
+                    break;
+
+                }
+
+            }
+
+            if (double_found) {
+
+                    return i;
+
+                }
+
+            double_found = true;
+
+        }
+
+        return -1;
+        
+    }
+
+}
